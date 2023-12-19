@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ehandbook - Sổ tay điện tử </title>
+        <link rel="shortcut icon" href = "logo.png">
+    </head>
+    <style>
+    body{
+      background-color: #ffffff;
+            color: #fff;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-size:cover;
+    }
+    button {
+      background-color: #E49344;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+}
+    .herder{
+            color: #E49344;
+            text-align:center;
+            font-size: 24px;
+            margin-top:auto ;
+        }
+    .navigation {
+      text-align: center;
+      margin-top:50px;
+        }
+
+  </style>
+  <body>
+    <div id="container" >
+      <div class="herder">
+          <h1>CHÀO MỪNG BẠN ĐẾN VỚI</h1>
+          <h1>SỔ TAY ĐIỆN TỬ - EHANDBOOK</h1>
+      </div>
+      <div class="navigation">
+          <button onclick="goSignup()">ĐĂNG KÝ</button>
+          <button onclick="goLogin()"> ĐĂNG NHẬP</button>
+      </div>
+      <script>
+        function goSignup() {
+            window.location.href = "Singup.html";
+        }
+        function goLogin() {
+            window.location.href = "Login.html";
+        }
+    </script>
