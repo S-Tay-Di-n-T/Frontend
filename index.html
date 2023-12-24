@@ -5,51 +5,165 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ehandbook - Sổ tay điện tử </title>
         <link rel="shortcut icon" href = "logo.png">
-    </head>
-    <style>
-    body{
-      background-color: #ffffff;
-            color: #fff;
-            text-align: center;
-            background-repeat: no-repeat;
-            background-size:cover;
-    }
-    button {
-      background-color: #E49344;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-}
-    .herder{
-            color: #E49344;
-            text-align:center;
-            font-size: 24px;
-            margin-top:auto ;
-        }
-    .navigation {
-      text-align: center;
-      margin-top:50px;
-        }
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-  </style>
-  <body>
-    <div id="container" >
-      <div class="herder">
-          <h1>CHÀO MỪNG BẠN ĐẾN VỚI</h1>
-          <h1>SỔ TAY ĐIỆN TỬ - EHANDBOOK</h1>
-      </div>
-      <div class="navigation">
-          <button onclick="goSignup()">ĐĂNG KÝ</button>
-          <button onclick="goLogin()"> ĐĂNG NHẬP</button>
-      </div>
-      <script>
-        function goSignup() {
-            window.location.href = "Singup.html";
-        }
-        function goLogin() {
-            window.location.href = "Login.html";
-        }
-    </script>
+        <!-- font awesome cdn link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+        <!-- custom css file link  -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+
+        <!-- header section starts  -->
+
+        <header>
+            <div id="menu-bar" class="fas fa-bars"></div>
+
+            <a href="#" class="logo"><span>E</span>handbook</a>
+            
+            <nav class="navbar">
+               <a href="#create">Create</a>
+               <a href="#feature">Feature</a>
+               <a href="#pricing">Pricing</a>
+               <a href="#help">Help</a>
+               <a href="#gallery">About us</a>
+             </nav>
+             <div class="icons">
+                <i class="fas fa-search"></i>
+               <a style='font-size:24px'> </a> <i class="fas fa-user" id="login-btn"></i>
+            </div>
+        </header>
+        <div class="login-form-container">
+            <i class="fas fa-times" id="form-close"></i>
+            <form action="">
+                <h3>ĐĂNG NHẬP</h3>
+                <input type="email" class="box" placeholder="Nhập tài khoản">
+                <input type="password" class="box" placeholder="Nhập mật khẩu">
+                <input type="submit" value="Đăng nhập" class="btn">
+                <input type="checkbox" id="remember">
+                <label for="remember" class="remember-label">Lưu thông tin</label>
+                <p><a href="#">Quên mật khẩu?</a></p>
+                <p>Bạn chưa có tài khoản? <button id="signup-btn" class="signup">Đăng ký ngay</button></p>
+            </form>
+        </div>
+                 
+        <div class="signup-form-container">
+
+            <i class="fas fa-times" id="form-cl"></i>
+
+            <form action="">
+                <h3>ĐĂNG KÝ</h3>
+                <input type="email" class="box" placeholder="Nhập họ tên">
+                <input type="email" class="box" placeholder="Nhập email">
+                <input type="password" class="box" placeholder="Nhập mật khẩu">
+                <input type="password" class="box" placeholder="Nhập lại mật khẩu">
+                <input type="submit" value="Đăng ký" class="btn">
+                <p>Bằng cách đăng ký Ehandbook, bạn đồng ý với <a href="#" style="color:dodgerblue">Điều khoản dịch vụ </a> và <a href="#" style="color:dodgerblue">Chính sách quyền riêng tư</a> của chúng tôi.</p>
+
+            </form>
+        </div>
+
+        <div id="modau">
+            <section class="save" id="save">
+                <div class="herder">
+                    <h1>BẠN MUỐN GHI CHÉP GÌ?</h1>
+                </div>
+                <div>
+                    <input type="text" placeholder="Nhập nội dung ...">
+                    <div class="icons">
+                        <i class="fas fa-file-upload"></i> <!-- Icon file upload -->
+                        <i class="fas fa-map-marker-alt"></i> <!-- Icon location -->
+                        <i class="fas fa-clock"></i> <!-- Icon time -->
+                        <i class="fas fa-volume-up"></i> <!-- Icon sound -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="gioithieu">
+            <h1><center class="gt-h1">Ehandbook là gì?</center></h1>
+
+            <div class="gt-dong1">  
+                <div class="rectangle">              
+                    <img src="anh1.png" alt="people" class="gt-img1" title="Ehandbook là gì?">
+                </div>
+                    <div class="gt-text1">
+                        <p><b>Ghi chép ở mọi nơi từ mọi thiết bị</b></p>
+                        <p style="margin-top: 20px;">
+                        Hỗ trợ nhiều loại thiết bị để có thể ghi chép,chỉnh sửa, đánh giá và chia sẻ ghi chú của bạn từ mọi thiết bị, mọi lúc, mọi nơi</p>
+                    </div>
+            </div>
+                            
+            <div class="gt-dong2">
+                <div class="rectangle1">
+                    <img src="anh2.png" alt="web" class="gt-img2" title="Ehandbook là gì?">
+                </div>
+                    <div class="gt-text2">
+                        <p><b>Tự tạo ghi chú theo sở thích</b></p>
+                        <p style="margin-top: 20px;">
+                            Với kho thiết kế đa dạng có thể tùy ý thay đổi giao diện, màu sắc, font,... phù hợp với sở thích, phong cách của mỗi người dùng </p>
+                    </div>
+            </div>
+
+
+            <div class="gt-dong3">
+                <div class="rectangle2">
+                    <img src="anh3.png" alt="note" class="gt-img3" title="Ehandbook là gì?">
+                </div>
+                    <div class="gt-text3">
+                        <p><b>Khả năng tự lên lịch và sắp xếp</b></p>
+                        <p style="margin-top: 20px;">
+                            Các ghi chú đã lưu sẽ tự động sắp xếp theo thời gian,  mức độ quan trọng để bạn có thể dễ đàng theo dõi một cách chính xác và linh hoạt</p>
+                    </div>
+            </div>
+
+
+            <div class="gt-dong4">
+                <div class="rectangle1">
+                    <img src="anh4.jpg" alt="share" class="gt-img4" title="Ehandbook là gì?">
+                </div>
+                    <div class="gt-text2">
+                        <p><b>Chia sẻ ghi chú và công việc nhóm</b></p>
+                        <p style="margin-top: 20px;">
+                            Làm việc theo nhóm hiệu quả và tối ưu nhờ việc dê dàng chia sẻ các ghi chú cho mọi người thông qua nhiều nền tảng khác nhau</p>
+                    </div>
+            </div>
+
+
+
+
+        </div>
+        <section class="footer">
+
+            <div class="box-container">
+        
+                <div class="box">
+                    <h3>Nhóm 3</h3>
+                </div>
+                <div class="box">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#">Create</a>
+                    <a href="#">Feature</a>
+                    <a href="#">Pircing</a>
+                    <a href="#">Help</a>
+                    <a href="#">About Us</a>
+                </div>
+                <div class="box">
+                    <h3>Follow Us</h3>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Youtube</a>
+                    <a href="#">Tiktok</a>
+                </div>
+        
+            </div>
+        </section>
+   
+<!-- custom js file link  -->
+<script src="script.js"></script>
+
+</body>
+</html>
